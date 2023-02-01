@@ -1,0 +1,181 @@
+:root{
+
+    --color-black-medium: #111313;
+    --color-blue:#467aeb;
+    --color-gray:#ccc;
+    --color-gray-medium:#ffffff;
+    --color-gray2:#b1b1b1;
+
+}
+
+/*-----------------------Sections---------------------------*/
+
+/*----------------------General Style------------------*/
+
+a{
+    color: inherit;
+}
+.container > .row {
+  margin-bottom: 3rem;
+}
+
+
+
+/*-----------------------Nav---------------------------*/
+
+.navbar-brand > img {
+   width: 55px;  
+}
+
+.navbar-main .active { 
+    text-decoration: underline var(--color-blue);
+    text-underline-offset: 6px;
+}
+
+
+/*-----------------------Header---------------------------*/
+
+.header-main{
+    height: 100vh;
+}
+
+.icons-social-media > a {
+   --size: 40px;
+   width: var(--size);
+   height: var(--size);
+   border-radius: 50%;
+   display: inline-flex;
+   justify-content:center;
+   align-items: center;
+   
+}
+
+.icons-social-media > a, 
+.sec-clients > a{
+    transition: filter 0.4s;
+}
+
+.icons-social-media > a:hover, 
+.sec-clients > a:hover{
+    filter: opacity(0.5);
+}
+
+.bg-facebook{
+   background-color: #023693;
+}
+
+.bg-twitter{
+   background-color: #33a9f3;
+}
+
+.photo-frame{
+    font-size: 20px;
+}
+
+.photo-frame::before, .photo-frame::after{
+    content: "";
+    display: block;
+    width: var(--box-size);
+    height: var(--box-size);
+    position: absolute;
+    z-index: -10 ;
+    animation: turnZ 9s linear alternate-reverse infinite;
+}
+
+.photo-frame::before{
+    --box-size:3em;
+    background-image: 
+    radial-gradient(var(--color-black-medium)50%,
+    var(--color-blue)50% );
+    top:calc( 99% - (var(--box-size) / 2));
+    right: calc(99% - (var(--box-size) / 2));
+}
+
+.photo-frame::after{
+    --box-size: 5em;
+    bottom: calc(98% - (var(--box-size) / 2));
+    left: calc(98% - (var(--box-size) / 2)) ;
+    background: linear-gradient( 
+      45deg, 
+       var(--color-gray-medium) 45%,
+       transparent 45%
+      ),
+      radial-gradient(
+        var(--color-blue) 30%,
+        var(--color-gray2) 30% 70%, 
+        var(--color-gray-medium) 65%,
+        transparent 90%
+        );
+}
+
+@keyframes turnZ {
+    to {
+        transform: rotate(1turn);
+    }
+}
+.header-main{
+    min-height: 120vh ;
+}
+
+/*---------------------------Service--------------------*/
+
+
+.icon-service{
+   --box-size: 70px;
+   width: var(--box-size);
+   height: var(--box-size);
+   padding: 10px;
+ 
+}
+
+/*--------------- Portfolio-----------------*/
+.portfolio-item:hover > img{
+   transition: 0.4s transform;
+}
+.portfolio-item:hover > img{
+   transform: scale(0.96);
+}
+
+
+/* -----------Clients ---------------*/
+
+.bg-blue{
+    background-color: #62c3ff;
+    filter: opacity(0.55);
+
+}
+
+@media screen and (max-width:376px) {
+
+    body{
+        margin-top: 4rem;
+    }
+    .header-main{
+        height: initial;
+    }
+
+   
+    
+} 
+
+
+/*-------------------------------*/
+
+.xlp1{
+      
+      margin-top: 20px;
+}
+.xpl2{
+      
+      scroll-margin-top: 11ex;
+}
+.xpl3{
+      /* background-color: red; */
+      margin-top: 40px;
+}
+
+
+
+
+
+
